@@ -1,0 +1,33 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+<input id="a" type="text">
+<input type="text" onkeyup="this.value=this.value.replace(/\d/g,'')">
+<p id="c">aaa aaa aaa</p>
+<script src="jquery-1.7.1.min.js"></script>
+<script>
+	$(function () {
+		function Trim(str, is_global) {
+			var result;
+			result = str.replace(/(^\s+)|(\s+$)/g, "");
+			if (is_global.toLowerCase() == "g") {
+				result = result.replace(/\s/g, "");
+			}
+			return result;
+		}
+
+
+//	var hh = document.getElementById('c')
+		var qq = Trim(   aaa vvv sss    ,g);
+		console.log(qq)
+
+	})
+</script>
+</body>
+</html>
